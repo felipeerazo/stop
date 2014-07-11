@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="../img/stop_icon.png">
+        <title>Como llego - STOP</title>
+
+        <!-- Estilos Bootstrap -->
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Estilos personalizados-->        
+        <link href="../css/signin.css" rel="stylesheet">
+        <link href="../css/theme.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../css/estilo.css" rel="stylesheet">
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="css/bootstrap-3.0.0/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!--libreria jquery desde el anfitrion google-->
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+        <script type="text/javascript" src="../js/jQuery.js"></script>
+
+        <!--script para llamar a google maps-->
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=es"></script>
+
+        <!--script para funciones del mapa y direccion-->
+        <script type="text/javascript" src="../js/script_mapa.js"></script>
+
+
+        <!--fancybox CSS -->
+        <link rel="stylesheet" type="text/css" href="../js/fancybox/jquery.fancybox-1.3.4.css"
+              media="screen" />
+        <!--fancybox JS -->
+        <script type="text/javascript" src="../js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+        <script type="text/javascript" src="../js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+        <!-- Script Cómo LLego -->
+        <script type="text/javascript" src="../js/como_llego.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <form class="form-signin" method="POST">                
+                <input id="latOrigen" type="hidden">
+                <input id="lngOrigen" type="hidden">
+                <input id="latDestino" type="hidden">
+                <input id="lngDestino" type="hidden">
+                <h2 class="form-signin-heading">&iquest;C&oacute;mo llego...?</h2>
+                <input type="text" class="form-control" placeholder="Origen" value="" name="origen" id="txtOrigen">
+                <center>
+                    <button type="button" class="btn btn-primary" onclick="obtenerAutom();">Obtener automat.</button>
+                    <input type="button" class="btn btn-info" value="Mapa" onclick="MostrarVentana('ventanaOrigen', 'obtenerDireccionOrigen(\'#txtOrigen\')');
+                            mostrarMapaOrigen(5.0622453, -75.5071972);"/>
+                </center>
+                <input type="text" class="form-control" placeholder="Destino" id="txtDestino" value="" name="destino">
+                <center>
+                    <input type="button" class="btn btn-info" value="Mapa" onclick="MostrarVentana('ventanaDestino', 'obtenerDireccionDestino(\'#txtDestino\')');
+                            mostrarMapaDestino(5.0622453, -75.5071972);" />
+                </center>
+                <input class="btn btn-lg btn-block boton" value="Ver Rutas" type="button" id="btnVerRutas"/>
+            </form>                
+            <a href="como_llego.html"><button style="max-width: 300px;" class="btn btn-lg btn-block btn-default">Limpiar</button></a>
+
+            <!-- Site footer -->
+            <div class="footer">
+                <p>&copy; Stop Group 2014</p>
+            </div>
+        </div> <!-- /container -->
+
+        <div style="display: none;">
+            <div id="ventanaOrigen"  style="overflow: hidden; width: 100%;">
+                <div id="mapaOrigen"></div>
+                <center>
+                    <input type="button" class="btn btn-info" value="Aceptar" onclick="OcultarVentana();"/>
+                </center>
+            </div>
+        </div>
+
+
+        <div style="display: none;">
+            <div id="ventanaDestino"  style="overflow: hidden;">
+                <div id="mapaDestino"></div>
+                <center>
+                    <input type="button" class="btn btn-info" value="Aceptar" onclick="OcultarVentana();"/>
+                </center>
+            </div>
+        </div>
+
+
+        <div style="display: none;">
+            <div id="ventanaRutas"  style="overflow: hidden;">                
+                <!--<div id="listaRutas"></div>-->
+                <div id="list4">
+                    <!--<ul>
+                        <li><a href="#"><strong>Toronto</strong>2004</a></li>
+                        <li><a href="#"><strong>Beijing</strong>2008</a></li>
+                        <li><a href="#"><strong>London</strong>2012</a></li>
+                        <li><a href="#"><strong>Rio de Janeiro</strong>2016</a></li>
+                    </ul>-->
+                </div>
+                <!--<input type="button" value="Cerrar" onclick="OcultarVentana()" />-->
+            </div>
+        </div>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,22 @@
+/* 
+    Document   : tablaEstilos
+    Created on : 10/07/2014, 11:21:11 PM
+    Author     : Camilo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+    
+}
+
+tr {
+background: #FFFFFF;
+}
+/* Para las filas alternas */
+tr.par {
+background: #9BCFCF;
+}
+
+

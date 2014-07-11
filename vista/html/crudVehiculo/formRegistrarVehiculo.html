@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!--Ruta archivos bootstrap. NO BORRAR-->
+     
+        
+       <link rel="shortcut icon" href="../../img/stop_icon.png">
+        <title>Gestión - Stop</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="../../css/bootstrap.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <!--<link href="css/estilo.css" rel="stylesheet">-->
+        <link href="../../css/signin.css" rel="stylesheet">
+        <link href="../../css/theme.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="css/bootstrap-3.0.0/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!--libreria jquery desde el anfitrión google-->
+        <script src="../../js/jQuery.js"></script>
+
+        <!--script para funciones del mapa y direccion-->
+        <script type="text/javascript" src="../../js/script_mapa.js"></script>
+        <script type="text/javascript" src="../../js/crudVehiculo/formRegistrarVehiculo.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <form class="form-signin" method="POST" action="formRegistrarVehiculo.html">
+                <center><h2 class="form-signin-heading">Registrar Vehículo...</h2></center>
+                <input type="text" class="form-control" placeholder="Placa" name="placa" id="placa"><br>
+                <input type="text" class="form-control" placeholder="Número de Puestos" name="numeropuestos" id="numeropuestos"><br>
+                <select class="form-control" name="empresa" id="empresa"></select>
+                <button class="btn btn-lg btn-block btn-success" type="submit" onclick="">Registrar</button>
+                <a>
+                    <button class="btn btn-lg btn-block btn-warning" type="submit">Limpiar</button>
+                </a>                
+            </form>
+        </div> <!-- /container -->
+    </body>
+</html>
