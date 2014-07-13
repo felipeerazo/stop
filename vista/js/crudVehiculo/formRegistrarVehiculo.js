@@ -32,7 +32,7 @@ $().ready(function() {
 
             var empresa = $("#empresa").val();
             convertirIdEmpresa(empresa);           
-            alert($("#empresaId").val());
+            //alert($("#empresaId").val());
             // alert("placa:" + placa + ";numP: " + numeropuestos + ";empresa: " + empresa + ";idEmpresa: " + idEmpresa);
         }
     }
@@ -51,7 +51,7 @@ $().ready(function() {
             var numeropuestos = $("#numeropuestos").val();
             var idEmpresa = $("#empresaId").val();
            // alert($(idEmpresa).val());
-          alert("placa:" + placa + ";numP: " + numeropuestos + ";empresa: " + empresa + ";idEmpresa: " + idEmpresa);
+         // alert("placa:" + placa + ";numP: " + numeropuestos + ";empresa: " + empresa + ";idEmpresa: " + idEmpresa);
             $.post("../../../controlador/fachada.php", {
                 clase: 'Vehiculo',
                 metodo: 'insertarVehiculo',
