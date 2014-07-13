@@ -1,28 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/C:/xampp/htdocs/stop/vista/html/gps.html</file>
-        <file>file:/C:/xampp/htdocs/stop/vista/js/gps.js</file>
-        <file>file:/C:/xampp/htdocs/stop/vista/html/paraderos.html</file>
-        <file>file:/C:/xampp/htdocs/stop/vista/js/paraderos.js</file>
-        <file>file:/C:/xampp/htdocs/stop/modelo/Vehiculo.php</file>
-        <file>file:/C:/xampp/htdocs/stop/modelo/Paradero.php</file>
-        <file>file:/C:/xampp/htdocs/stop/modelo/WebServices.php</file>
-        <file>file:/C:/xampp/htdocs/stop/vista/html/admin.html</file>
-        <file>file:/C:/xampp/htdocs/stop/vista/js/sitio_interes_categorias.js</file>
-        <file>file:/C:/xampp/htdocs/stop/controlador/fachada.php</file>
-        <file>file:/C:/xampp/htdocs/stop/serviciosVarios/utilidades/UtilConexion.php</file>
-        <file>file:/C:/xampp/htdocs/stop/modelo/Conexion.php</file>
-        <file>file:/C:/xampp/htdocs/stop/modelo/Ruta.php</file>
-        <file>file:/C:/xampp/htdocs/stop/modelo/Categoria.php</file>
-        <file>file:/C:/xampp/htdocs/stop/vista/html/como_llego.html</file>
-        <file>file:/C:/xampp/htdocs/stop/vista/js/como_llego.js</file>
-        <file>file:/C:/xampp/htdocs/stop/modelo/Empresa.php</file>
-        <file>file:/C:/xampp/htdocs/stop/indexAdmin.html</file>
-        <file>file:/C:/xampp/htdocs/stop/vista/js/crudVehiculo/formRegistrarVehiculo.js</file>
-        <file>file:/C:/xampp/htdocs/stop/vista/html/crudVehiculo/formRegistrarVehiculo.html</file>
-    </open-files>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/var/www/stop/index.html</file>

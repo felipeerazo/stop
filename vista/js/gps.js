@@ -49,6 +49,6 @@ function mostrarPosicion(position) {
         latitud: latitud,
         longitud: longitud
     }, function(data) {
-
+$("#res").html(data);
     }, "json");
 }
