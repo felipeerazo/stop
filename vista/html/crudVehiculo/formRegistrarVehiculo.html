@@ -8,9 +8,9 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <!--Ruta archivos bootstrap. NO BORRAR-->
-     
-        
-       <link rel="shortcut icon" href="../../img/stop_icon.png">
+
+
+        <link rel="shortcut icon" href="../../img/stop_icon.png">
         <title>Gestión - Stop</title>
 
         <!-- Bootstrap core CSS -->
@@ -22,6 +22,8 @@
         <link href="../../css/signin.css" rel="stylesheet">
         <link href="../../css/theme.css" rel="stylesheet">
         <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../css/estilo.css" rel="stylesheet">
+
 
         <!-- Just for debugging purposes. Don't actually copy this line! -->
         <!--[if lt IE 9]><script src="css/bootstrap-3.0.0/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -46,11 +48,14 @@
                 <center><h2 class="form-signin-heading">Registrar Vehículo...</h2></center>
                 <input type="text" class="form-control" placeholder="Placa" name="placa" id="placa"><br>
                 <input type="text" class="form-control" placeholder="Número de Puestos" name="numeropuestos" id="numeropuestos"><br>
-                <select class="form-control" name="empresa" id="empresa"></select>
-                <button class="btn btn-lg btn-block btn-success" type="submit" onclick="">Registrar</button>
-                <a>
-                    <button class="btn btn-lg btn-block btn-warning" type="submit">Limpiar</button>
-                </a>                
+                <select class="form-control" name="empresa" id="empresa"></select><br>
+                <select class="form-control" name="ruta" id="ruta"></select>
+                <input class="btn btn-lg btn-block boton" value="Validar" type="button" id="btnValidarVehiculo"/>
+                
+                <input class="btn btn-lg btn-block boton" value="Registrar" type="button" id="btnRegistrarVehiculo"/>
+                <div id="divIdEmpresa">  </div>
+                <a href="formRegistrarVehiculo.html"><button style="max-width: 300px;" class="btn btn-lg btn-block btn-default">Limpiar</button></a>
+
             </form>
         </div> <!-- /container -->
     </body>

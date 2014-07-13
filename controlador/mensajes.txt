@@ -21,3 +21,16 @@
 [11-Jul-2014 19:22:40 Europe/Berlin] PHP Fatal error:  Class 'UtilConexion' not found in C:\xampp\htdocs\stop\controlador\fachada.php on line 27
 [11-Jul-2014 19:22:58 Europe/Berlin] PHP Fatal error:  Class 'UtilConexion' not found in C:\xampp\htdocs\stop\controlador\fachada.php on line 27
 [11-Jul-2014 19:29:44 Europe/Berlin] PHP Fatal error:  Class 'UtilConexion' not found in C:\xampp\htdocs\stop\controlador\fachada.php on line 27
+[12-Jul-2014 10:58:08 Europe/Berlin] PHP Fatal error:  Call to undefined method Empresa::getIdEmpresa() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[12-Jul-2014 10:59:35 Europe/Berlin] PHP Fatal error:  Call to undefined method Empresa::getIdEmpresa() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[12-Jul-2014 11:04:50 Europe/Berlin] PHP Fatal error:  Call to undefined method Empresa::getIdEmpresa() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[12-Jul-2014 11:04:56 Europe/Berlin] PHP Fatal error:  Call to undefined method Empresa::getIdEmpresa() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[12-Jul-2014 11:05:00 Europe/Berlin] PHP Fatal error:  Call to undefined method Empresa::getIdEmpresa() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[12-Jul-2014 11:06:58 Europe/Berlin] PHP Fatal error:  Call to undefined method Empresa::getIdEmpresa() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[12-Jul-2014 11:07:35 Europe/Berlin] PHP Fatal error:  Call to undefined method Empresa::getIdEmpresa() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[12-Jul-2014 11:09:00 Europe/Berlin] PHP Fatal error:  Call to undefined method Empresa::getIdEmpresa() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[12-Jul-2014 11:09:47 Europe/Berlin] PHP Fatal error:  Call to undefined method Empresa::getIdEmpresa() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[12-Jul-2014 11:10:52 Europe/Berlin] PHP Fatal error:  Call to undefined method Empresa::getIdEmpresa() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[12-Jul-2014 11:11:30 Europe/Berlin] PHP Fatal error:  Call to undefined method Empresa::getIdEmpresa() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[12-Jul-2014 11:11:32 Europe/Berlin] PHP Fatal error:  Call to undefined method Empresa::getIdEmpresa() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[12-Jul-2014 11:11:32 Europe/Berlin] PHP Fatal error:  Call to undefined method Empresa::getIdEmpresa() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37

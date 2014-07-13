@@ -72,6 +72,7 @@ function ProcesarDatos(data) {
     });
     res = res + "</ul>";
     $("#list4").html(res);
+    
 }
 
 function getVarsUrl() {

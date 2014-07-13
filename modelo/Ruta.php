@@ -38,6 +38,20 @@ class Ruta {
         echo json_encode($res); 
     }
 
+    
+    function getListarRutas($argumentos) {
+        extract($argumentos);
+        $sql = utf8_encode("CALL lista_rutas();");
+        $consulta=$this->db->execute_procedure($sql);
+        $res[]=null;
+        $i=0;
+        while ($fila =mysql_fetch_array($consulta)){
+            $res[$i]=$fila;            
+            $i++;
+        }
+        echo json_encode($res); 
+    }
+    
 }
 
 ?>
