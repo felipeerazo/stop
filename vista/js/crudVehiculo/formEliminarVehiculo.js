@@ -21,7 +21,6 @@ $().ready(function() {
     });
 });
 
-
 function buscarVehiculoTabla() {
     var placa;
     if ($("#placa").val() === "") {
