@@ -94,3 +94,17 @@
 [14-Jul-2014 06:57:26 Europe/Berlin] PHP Fatal error:  Call to undefined method Vehiculo::buscarRegistroVehiculo() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
 [14-Jul-2014 06:57:26 Europe/Berlin] PHP Fatal error:  Call to undefined method Vehiculo::buscarRegistroVehiculo() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
 [14-Jul-2014 06:57:26 Europe/Berlin] PHP Fatal error:  Call to undefined method Vehiculo::buscarRegistroVehiculo() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 07:22:12 Europe/Berlin] PHP Fatal error:  Call to undefined method Vehiculo::buscarRegistroVehiculo() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 07:22:33 Europe/Berlin] PHP Fatal error:  Call to undefined method Vehiculo::buscarRegistroVehiculo() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 07:25:46 Europe/Berlin] PHP Fatal error:  Call to undefined method Vehiculo::buscarRegistroVehiculo() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 07:28:10 Europe/Berlin] PHP Fatal error:  Call to undefined method Vehiculo::buscarRegistroVehiculo() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 07:28:57 Europe/Berlin] PHP Fatal error:  Call to undefined method Vehiculo::buscarRegistroVehiculo() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 07:29:29 Europe/Berlin] PHP Fatal error:  Call to undefined method Vehiculo::buscarRegistroVehiculo() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 07:31:35 Europe/Berlin] PHP Fatal error:  Call to undefined method Vehiculo::buscarRegistroVehiculo() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 07:33:54 Europe/Berlin] PHP Fatal error:  Call to undefined method Vehiculo::buscarRegistroVehiculo() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 09:33:11 Europe/Berlin] PHP Fatal error:  Call to undefined method Paradero::getListaParadero() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 09:37:57 Europe/Berlin] PHP Fatal error:  Call to undefined method Paradero::getListaParadero() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 09:38:12 Europe/Berlin] PHP Fatal error:  Call to undefined method Paradero::getListaParadero() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 09:50:24 Europe/Berlin] PHP Fatal error:  Call to undefined method Paradero::getListaParadero() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 16:10:55 Europe/Berlin] PHP Fatal error:  Call to undefined method Paradero::getListaParadero() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37
+[14-Jul-2014 16:11:41 Europe/Berlin] PHP Fatal error:  Call to undefined method Paradero::getListaParadero() in C:\xampp\htdocs\stop\controlador\fachada.php on line 37

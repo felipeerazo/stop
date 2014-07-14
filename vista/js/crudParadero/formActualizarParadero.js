@@ -6,8 +6,8 @@
 
 $().ready(function() {
     $.post("../../../controlador/fachada.php", {
-        clase: 'Vehiculo',
-        metodo: 'getListaVehiculo',
+        clase: 'Paradero',
+        metodo: 'getListaParadero',
         placa: ''
     }, function(data) {
         ProcesarDatos(data);
@@ -17,29 +17,19 @@ $().ready(function() {
         mostrarCamposActualizar();
     });
     $("#Buscar").on('click', function(e) {
-        buscarVehiculoTabla();
+        buscarParaderoTabla();
     });
-    $("#btnValidarVehiculo").on('click', function(e) {
-        if ($("#placa").val() === "" || $("#numeropuestos").val() === "") {
-            alert("Ingrese ambos datos");
-            return;
-        }
-        else {
-            var empresa = $("#empresa").val();
-            convertirIdEmpresa(empresa);
-        }
-    }
-    );
+    
     $("#Actualizar").on('click', function(e) {
-        var placaMod = $("#placaMod").val();
-        var puestos = $("#puestos").val();
-        var idEmpresa = $("#empresaId").val();
+        var nombre = $("#nombre").val();
+        var longitud = $("#longitud").val();
+        var latitud = $("#latitud").val();
         $.post("../../../controlador/fachada.php", {
-            clase: 'Vehiculo',
-            metodo: 'actualizarVehiculo',
-            placa: placaMod,
-            puestos: puestos,
-            empresa: idEmpresa
+            clase: 'Paradero',
+            metodo: 'actualizarParadero',
+            nombre: nombre,
+            longitud: longitud,
+            latitud: latitud
         }, function(data) {
             console.log(data);
         }, "json");
@@ -48,16 +38,16 @@ $().ready(function() {
 });
 
 function buscarVehiculoTabla() {
-    var placa;
-    if ($("#placa").val() === "") {
-        alert("Ingrese una placa");
+    var nombre;
+    if ($("#nombre").val() === "") {
+        alert("Ingrese el nombre de un paradero");
         return;
     } else {
-        placa = $("#placa").val();
+        nombre = $("#nombre").val();
         $.post("../../../controlador/fachada.php", {
-            clase: 'Vehiculo',
-            metodo: 'buscarVehiculoTabla',
-            placa: placa
+            clase: 'Paradero',
+            metodo: 'buscarParaderoTabla',
+            nombre: nombre
         }, function(data) {
             ProcesarDatos()(data);
         }, "json");
@@ -66,9 +56,9 @@ function buscarVehiculoTabla() {
 
 
 function ProcesarDatos(data) {
-    var res = '<tr><th>Placa</th><th>Empresa</th><th>Marcar</th></tr>';
+    var res = '<tr><th>Nombre</th><th>Longitud</th><th>Latitud</th></tr>';
     $.each(data, function(i, fila) {
-        res = res + '<tr data-valor= ' + fila["veh_placa"] + ' class="click"><td>' + fila["veh_placa"] + '</td><td>' + fila["emp_nombre"] + '</td> <td><input type="radio" name="radiobutton"/></td></tr>';
+        res = res + '<tr data-valor= ' + fila["par_nombre"] + ' class="click"><td>' + fila["par_nombre"] + '</td><td>' + fila["par_longitud"] + '</td><td>' + fila["par_latitud"] + '</td> <td><input type="radio" name="radiobutton"/></td></tr>';
     });
     $("#tabla").html(res);
 }
@@ -84,7 +74,7 @@ function mostrarCamposActualizar() {
             var radiobutton = row.cells[2].childNodes[0];
             if (null != radiobutton && true == radiobutton.checked) {
                 id = row.cells[0].innerText;
-                busquedaVehiculo(id.toString());
+                busquedaParadero(id.toString());
             }
         }
     } catch (e) {
@@ -92,47 +82,22 @@ function mostrarCamposActualizar() {
     }
 }
 
-
-
-
-
-
 function actualizar(id) {
     $.post("../../../controlador/fachada.php", {
-        clase: 'Vehiculo',
-        metodo: 'actualizarVehiculo',
-        placa: id
+        clase: 'Paradero',
+        metodo: 'actualizarParadero',
+        nombre: id
     }, function(data) {
         console.log(data);
     }, "json");
 }
 
-function convertirIdEmpresa(nombre) {
-    var empresa;
-    $.post("../../../controlador/fachada.php", {
-        clase: 'Empresa',
-        metodo: 'getIdEmpresa',
-        param: nombre
-    }, function(data) {
-        $.each(data, function(i, fila) {
-            empresa = fila["0"];
-        });
-        convertIdEmpresa(empresa);
-    }, "json");
-}
 
-function convertIdEmpresa(data) {
-    var res = "<input";
-    res = res + " id=\"empresaId\" type=\"hidden\" value=\"" + data + "\"";
-    res = res + ">";
-    $("#divIdEmpresa").html(res);
-}
-
-function busquedaVehiculo(placa) {     
+function busquedaParadero(nombre) {     
     $.post("../../../controlador/fachada.php", {
-            clase: 'Vehiculo',
-            metodo: 'buscarRegistroVehiculo',
-            placa: placa.toString()
+            clase: 'Paradero',
+            metodo: 'buscarRegistroParadero',
+            nombre: nombre.toString()
         }, function(data) {
         alert('data: '+data);
         camposActualizar(data);
@@ -145,5 +110,5 @@ function camposActualizar(data) {
     $.each(data, function(i, fila) {
         res = 'Número de Puestos:<input type="hidden" value=' + fila["veh_placa"] + ' id="puestos" name="puestos" /> <input type="text" value=' + fila["veh_puestos"] + ' id="puestos" name="puestos" /> <br> Empresa: <input type="text" value=' + fila["veh_empresa"] + ' id="empresa" name="empresa" /><br><input class="btn btn-lg btn-block boton" value="Validar" type="button" id="btnValidarVehiculo"/><br><input class="btn btn-lg btn-block boton" value="Actualizar" type="button" id="Actualizar"/>';
     });
-    $("#divActualizarVehiculo").html(res);
+    $("#divActualizarParadero").html(res);
 }
