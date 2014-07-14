@@ -45,6 +45,45 @@ class Vehiculo {
         }
         echo json_encode($res);
     }
+    
+    function eliminarVehiculo($argumentos){
+        extract($argumentos);        
+        $sql = utf8_encode("CALL eliminar_vehiculo('$placa');");
+        $consulta=$this->db->execute_procedure($sql);
+        $res[]=null;
+        $i=0;
+        while ($fila =mysql_fetch_array($consulta)){
+            $res[$i]=$fila;            
+            $i++;
+        }
+        echo json_encode($res);
+    }
+    
+    function getListaVehiculo($argumentos){
+        extract($argumentos);        
+        $sql = utf8_encode("CALL mostrar_vehiculos();");
+        $consulta=$this->db->execute_procedure($sql);
+        $res[]=null;
+        $i=0;
+        while ($fila =mysql_fetch_array($consulta)){
+            $res[$i]=$fila;            
+            $i++;
+        }
+        echo json_encode($res);
+    }
+    
+    function buscarVehiculoTabla($argumentos){
+        extract($argumentos);        
+        $sql = utf8_encode("CALL buscar_vehiculo_tabla('$placa');");
+        $consulta=$this->db->execute_procedure($sql);
+        $res[]=null;
+        $i=0;
+        while ($fila =mysql_fetch_array($consulta)){
+            $res[$i]=$fila;            
+            $i++;
+        }
+        echo json_encode($res);
+    }
 }
 
 ?>

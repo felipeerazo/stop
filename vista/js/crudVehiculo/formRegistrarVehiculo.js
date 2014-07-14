@@ -15,14 +15,6 @@ $().ready(function() {
         cmbEmpresa(data);
     }, "json");
 
-    $.post("../../../controlador/fachada.php", {
-        clase: 'Ruta',
-        metodo: 'getListarRutas',
-        param: ''
-    }, function(data) {
-        cmbRuta(data);
-    }, "json");
-
     $("#btnValidarVehiculo").on('click', function(e) {
         if ($("#placa").val() === "" || $("#numeropuestos").val() === "") {
             alert("Ingrese ambos datos");
@@ -31,7 +23,7 @@ $().ready(function() {
         else {
 
             var empresa = $("#empresa").val();
-            convertirIdEmpresa(empresa);           
+            convertirIdEmpresa(empresa);
             //alert($("#empresaId").val());
             // alert("placa:" + placa + ";numP: " + numeropuestos + ";empresa: " + empresa + ";idEmpresa: " + idEmpresa);
         }
@@ -50,8 +42,8 @@ $().ready(function() {
             var placa = $("#placa").val();
             var numeropuestos = $("#numeropuestos").val();
             var idEmpresa = $("#empresaId").val();
-           // alert($(idEmpresa).val());
-         // alert("placa:" + placa + ";numP: " + numeropuestos + ";empresa: " + empresa + ";idEmpresa: " + idEmpresa);
+            // alert($(idEmpresa).val());
+            // alert("placa:" + placa + ";numP: " + numeropuestos + ";empresa: " + empresa + ";idEmpresa: " + idEmpresa);
             $.post("../../../controlador/fachada.php", {
                 clase: 'Vehiculo',
                 metodo: 'insertarVehiculo',
