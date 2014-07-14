@@ -72,6 +72,9 @@ class Vehiculo {
         echo json_encode($res);
     }
     
+    
+  
+    
     function buscarVehiculoTabla($argumentos){
         extract($argumentos);        
         $sql = utf8_encode("CALL buscar_vehiculo_tabla('$placa');");
@@ -85,5 +88,32 @@ class Vehiculo {
         echo json_encode($res);
     }
 }
+
+
+function actualizarVehiculo($argumentos){
+        extract($argumentos);        
+        $sql = utf8_encode("CALL actualizar_vehiculo('$placa', $puestos, $empresa);");
+        $consulta=$this->db->execute_procedure($sql);
+        $res[]=null;
+        $i=0;
+        while ($fila =mysql_fetch_array($consulta)){
+            $res[$i]=$fila;            
+            $i++;
+        }
+        echo json_encode($res);
+    }
+    
+      function buscarRegistroVehiculo($argumentos){
+        extract($argumentos);        
+        $sql = utf8_encode("CALL buscar_registro_vehiculo('$placa');");
+        $consulta=$this->db->execute_procedure($sql);
+        $res[]=null;
+        $i=0;
+        while ($fila =mysql_fetch_array($consulta)){
+            $res[$i]=$fila;            
+            $i++;
+        }
+        echo json_encode($res);
+    }
 
 ?>

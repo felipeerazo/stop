@@ -21,11 +21,8 @@ $().ready(function() {
             return;
         }
         else {
-
             var empresa = $("#empresa").val();
             convertirIdEmpresa(empresa);
-            //alert($("#empresaId").val());
-            // alert("placa:" + placa + ";numP: " + numeropuestos + ";empresa: " + empresa + ";idEmpresa: " + idEmpresa);
         }
     }
     );
@@ -42,8 +39,6 @@ $().ready(function() {
             var placa = $("#placa").val();
             var numeropuestos = $("#numeropuestos").val();
             var idEmpresa = $("#empresaId").val();
-            // alert($(idEmpresa).val());
-            // alert("placa:" + placa + ";numP: " + numeropuestos + ";empresa: " + empresa + ";idEmpresa: " + idEmpresa);
             $.post("../../../controlador/fachada.php", {
                 clase: 'Vehiculo',
                 metodo: 'insertarVehiculo',
@@ -87,9 +82,7 @@ function convertirIdEmpresa(nombre) {
         param: nombre
     }, function(data) {
         $.each(data, function(i, fila) {
-
             empresa = fila["0"];
-
         });
         convertIdEmpresa(empresa);
     }, "json");
@@ -104,7 +97,6 @@ function convertIdEmpresa(data) {
 
 function obtenerEmpresa() {
     $("#empresaId").val()
-
 }
 
 
